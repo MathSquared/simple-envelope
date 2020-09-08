@@ -12,6 +12,13 @@ ENVELOPE_SIZES = {
     '#16':    ('pt', 432, 864),
 }
 
+TO_PT = {
+    'pt': 1,
+    'in': 72,
+    'cm': 72 / 2.54,
+    'mm': 72 / 25.4,
+}
+
 # USPS DMM, 101.1.1-2.1, 2020-09-07.
 # All in points, 72 pt = 1 in, to avoid floating-point error
 ENVELOPE_WIDTH_MIN = 5 * 72
