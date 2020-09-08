@@ -1,3 +1,28 @@
+DEFAULT_SPECS = {
+    # These addresses are placeholders, obviously.
+    'delivery': [
+        'THE PRESIDENT',
+        'THE WHITE HOUSE',
+        '1600 PENNSYLVANIA AVE NW',
+        'WASHINGTON DC  20500',
+    ],
+    'return': [
+        'The Speaker',
+        'United States House of Representatives',
+        'Washington, DC 20515',
+    ],
+    'envelope': ('pt', 297, 684),  # no. 10
+    'delivery_font': 'Courier',
+    'return_font': 'Arial',
+    'delivery_size': 12,
+    'return_size': 8,
+    # Position of top-left corner of delivery and return addresses.
+    'delivery_from_bottom': 2 * 72 + 36,
+    'delivery_from_right': None,  # must be computed; no default
+    'return_from_top': 9,
+    'return_from_left': 9,
+}
+
 ENVELOPE_SIZES = {
     '#6 1/4': ('pt', 252, 432),
     '#6 3/4': ('pt', 261, 468),

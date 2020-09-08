@@ -1,7 +1,9 @@
+from .constants import DEFAULT_SPECS
 from .input import get_input
 
 def main():
-    specs = get_input()
+    specs = dict(DEFAULT_SPECS)
+    specs.update(get_input())
 
 
 if __name__ == '__main__':
