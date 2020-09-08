@@ -1,5 +1,7 @@
+from .input import get_input
+
 def main():
-    pass
+    specs = get_input()
 
 
 if __name__ == '__main__':
