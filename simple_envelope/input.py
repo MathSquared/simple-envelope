@@ -91,15 +91,17 @@ def _create_envelope_warnings(size):
     if height_pt < constants.ENVELOPE_HEIGHT_MIN:
         ret.append('Warning: envelope is non-mailable (not tall enough)')
     if height_pt > constants.ENVELOPE_HEIGHT_BIG:
-        ret.append('Warning: envelope is a flat (too tall for a letter)')
-    if height_pt < constants.ENVELOPE_HEIGHT_MAX:
-        ret.append('Warning: envelope is non-mailable (too tall)')
+        if height_pt > constants.ENVELOPE_HEIGHT_MAX:
+            ret.append('Warning: envelope is non-mailable (too tall)')
+        else:
+            ret.append('Warning: envelope is a flat (too tall for a letter)')
 
     if width_pt < constants.ENVELOPE_WIDTH_MIN:
         ret.append('Warning: envelope is non-mailable (not wide enough)')
     if width_pt > constants.ENVELOPE_WIDTH_BIG:
-        ret.append('Warning: envelope is a flat (too wide for a letter)')
-    if width_pt < constants.ENVELOPE_WIDTH_MAX:
-        ret.append('Warning: envelope is non-mailable (too wide)')
+        if width_pt > constants.ENVELOPE_WIDTH_MAX:
+            ret.append('Warning: envelope is non-mailable (too wide)')
+        else:
+            ret.append('Warning: envelope is a flat (too wide for a letter)')
 
     return ret
