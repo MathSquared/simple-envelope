@@ -12,6 +12,17 @@ ENVELOPE_SIZES = {
     '#16':    ('pt', 432, 864),
 }
 
+# USPS DMM, 101.1.1-2.1, 2020-09-07.
+# All in points, 72 pt = 1 in, to avoid floating-point error
+ENVELOPE_WIDTH_MIN = 5 * 72
+ENVELOPE_WIDTH_BIG = 11 * 72 + 36  # envelopes wider than this mail at flat prices
+ENVELOPE_WIDTH_MAX = 15 * 72
+ENVELOPE_HEIGHT_MIN = 3 * 72 + 36
+ENVELOPE_HEIGHT_BIG = 6 * 72 + 9
+ENVELOPE_HEIGHT_MAX = 12 * 72
+ENVELOPE_MACHINEABLE_MIN = 1.3  # w/h to avoid non-machineable surcharge
+ENVELOPE_MACHINEABLE_MAX = 2.5
+
 USPS_SUFFIXES = {
     # USPS Publication 28, C1, 2020-09-07.
     'ALLEY': 'ALY',
