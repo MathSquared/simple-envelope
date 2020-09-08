@@ -19,8 +19,10 @@ DEFAULT_SPECS = {
     # Position of top-left corner of delivery and return addresses.
     'delivery_from_bottom': 2 * 72 + 36,
     'delivery_from_right': None,  # must be computed; no default
-    'return_from_top': 9,
-    'return_from_left': 9,
+    # My printer can't print 12 pt from the edge, likely others also can't
+    'return_from_top': 12,
+    'return_from_left': 12,
+    'line_spacing': 1.2,
 }
 
 ENVELOPE_SIZES = {
