@@ -57,7 +57,7 @@ def get_input():
         print()
 
         # Warn if envelope is bad size
-        if show_warnings:
+        if show_warning:
             for warning in _create_envelope_warnings(ret['envelope']):
                 print(warning)
             print()
