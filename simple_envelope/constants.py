@@ -221,3 +221,32 @@ USPS_SUFFIXES = {
     'WELL': 'WL',
     'WELLS': 'WLS',
 }
+
+USPS_SECONDARIES = {
+    # USPS Publication 28, C2, 2020-09-07.
+    # Boolean is if it requires/allows a unit number.
+    'APARTMENT': ('APT', True),
+    'BASEMENT': ('BSMT', False),
+    'BUILDING': ('BLDG', True),
+    'DEPARTMENT': ('DEPT', True),
+    'FLOOR': ('FL', True),
+    'FRONT': ('FRNT', False),
+    'HANGER': ('HNGR', True),
+    'KEY': ('KEY', True),
+    'LOBBY': ('LBBY', False),
+    'LOT': ('LOT', True),
+    'LOWER': ('LOWR', False),
+    'OFFICE': ('OFC', False),
+    'PENTHOUSE': ('PH', False),
+    'PIER': ('PIER', True),
+    'REAR': ('REAR', False),
+    'ROOM': ('RM', True),
+    'SIDE': ('SIDE', False),
+    'SLIP': ('SLIP', True),
+    'SPACE': ('SPC', True),
+    'STOP': ('STOP', True),
+    'SUITE': ('STE', True),
+    'TRAILER': ('TRLR', True),
+    'UNIT': ('UNIT', True),
+    'UPPER': ('UPPR', False),
+}
